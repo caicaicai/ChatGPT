@@ -1,0 +1,12 @@
+
+version: '3.3'
+
+services:
+   chatgpt:
+     image: harbor.xiaocaicai.com/public/chatgpt:latest
+     build: .
+     restart: always
+     environment:
+      - OpenAiToken=token
+     ports:
+       - "15701:5000"
